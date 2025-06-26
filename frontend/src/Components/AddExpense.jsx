@@ -68,14 +68,14 @@ const AddExpense = () => {
     }, 2000);
   };
   return (
-    <div>
+    <div className="flex justify-center w-full h-screen items-center bg-[#CCEDFF]">
       <form onSubmit={handleSubmit}>
          <input
           type="text"
           name="amount"
           value={amount}
           onChange={handleOnChange}
-          className="border-2 px-1 my-1"
+          className="border-2 px-1 my-1 w-60"
           placeholder="What it is costed"
         />
         {amountError}
@@ -84,7 +84,7 @@ const AddExpense = () => {
           type="text"
           name="category"
           value={category}
-          className="border-2 px-1 my-1"
+          className="border-2 px-1 w-60 my-1"
           placeholder="Enter Category"
           onChange={handleOnChange}
         />
@@ -94,7 +94,7 @@ const AddExpense = () => {
           type="text"
           name="description"
           value={description}
-          className="border-2 px-1 my-1"
+          className="border-2 px-1 my-1 w-60"
           placeholder="Enter Reason"
           onChange={handleOnChange}
         />
@@ -105,12 +105,12 @@ const AddExpense = () => {
           name="date"
           value={date}
           onChange={handleOnChange}
-          className="border-2 px-1 my-2"
+          className="border-2 px-1 my-2 w-60"
         />{dateError}
         <br />
         <button
           disabled={isSubmitting}
-          className={`border-1 p-1 ${
+          className={`rounded-sm border-2 hover:bg-[#FFE8D6] p-1 ${
             isSubmitting === false ? "cursor-pointer" : "cursor-not-allowed"
           }`}
         >
